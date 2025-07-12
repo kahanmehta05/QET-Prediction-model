@@ -83,7 +83,7 @@ Modern databases often struggle with predicting query runtimes accurately. Tradi
 
 ## 🧾 Citation / Credits
 
-This work was done as part of **M.Tech Minor Research Project** under the guidance of **Prof. Amit Mankodi**,  
+This work was done as part of **Research Project** under the guidance of **Prof. Amit Mankodi**,  
 Department of ICT, Dhirubhai Ambani Institute of Information and Communication Technology (DAU / DAIICT), Gujarat, India.
 
 ---
