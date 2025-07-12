@@ -2,7 +2,7 @@
 
 This repository contains the full pipeline for predicting SQL query execution time (QET) using only **pre-execution plan features**, avoiding post-execution data leakage. It was developed as a **minor research project under Prof. Amit Mankodi at DAU (DAIICT)**.
 
-## 🚀 Project Overview
+## Project Overview
 
 Modern databases often struggle with predicting query runtimes accurately. Traditional optimizers frequently make mistakes due to cardinality and cost estimation errors. This project builds a **machine learning-based model** that:
 - Uses **pre-execution features only**
@@ -10,7 +10,7 @@ Modern databases often struggle with predicting query runtimes accurately. Tradi
 - Predicts QET accurately before running the query
 - Aids in future optimizer feedback and anomaly detection systems
 
-## 🧠 Why This Research Is Important
+## Why This Research Is Important
 
 - Existing work often includes post-execution features (actual rows, timings), which are unavailable before runtime — causing **data leakage** and unrealistic models.
 - We designed a **clean feature set** of 33 purely structural + cost-based features.
@@ -39,7 +39,7 @@ Modern databases often struggle with predicting query runtimes accurately. Tradi
 
 ---
 
-## 🔁 Full Execution Pipeline
+## Full Execution Pipeline
 
 1. **Query Generation**:  
    Use `generate_tpch_queries.py` to generate 10,000+ diverse SQL queries.
@@ -62,17 +62,17 @@ Modern databases often struggle with predicting query runtimes accurately. Tradi
 
 ---
 
-## 🎯 Key Achievements
+## Key Achievements
 
-- 📈 **R² Score ~ 0.93** using only pre-execution features
-- 🚫 Removed post-execution metrics (e.g., actual rows, loops, time) to prevent data leakage
-- 🔍 Identified top impactful features via SHAP:  
+- **R² Score ~ 0.93** using only pre-execution features
+- Removed post-execution metrics (e.g., actual rows, loops, time) to prevent data leakage
+- Identified top impactful features via SHAP:  
   `plan_total_cost`, `plan_startup_cost`, `estimated_rows`, `query_length`, etc.
-- 🧠 Designed interpretable, portable models using Random Forest, XGBoost, and Gradient Boosting
+- Designed interpretable, portable models using Random Forest, XGBoost, and Gradient Boosting
 
 ---
 
-## 🔮 Future Directions
+## Future Directions
 
 - Predict **optimizer mistakes** or **plan regressions** using this model
 - Integrate into PostgreSQL or external advisor to suggest better join orders
@@ -88,7 +88,7 @@ Department of ICT, Dhirubhai Ambani Institute of Information and Communication T
 
 ---
 
-## 📌 How to Run
+##  How to Run
 
 ```bash
 # Recommended: Use a virtualenv or conda env
