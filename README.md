@@ -15,7 +15,84 @@ Modern databases often struggle with predicting query runtimes accurately. Tradi
 - Existing work often includes post-execution features (actual rows, timings), which are unavailable before runtime — causing **data leakage** and unrealistic models.
 - We designed a **clean feature set** of 33 purely structural + cost-based features.
 - Demonstrates that **pre-execution signals alone** can achieve high accuracy if engineered and modeled well.
+✅ Final Pre-Execution Feature List
+Plan-level cost & size
 
+query_planning_time
+
+plan_total_cost
+
+plan_startup_cost
+
+plan_rows
+
+plan_width
+
+Structural complexity
+
+max_depth
+
+num_operators
+
+Execution characteristics
+
+has_sort
+
+has_hash
+
+is_parallel_aware
+
+max_workers_planned
+
+max_workers_launched
+
+Operator/node type counts
+
+node_type_Seq_Scan_count
+
+node_type_Hash_Join_count
+
+node_type_Merge_Join_count
+
+node_type_Nested_Loop_count
+
+node_type_Aggregate_count
+
+node_type_Sort_count
+
+node_type_Limit_count
+
+node_type_Materialize_count
+
+node_type_Gather_count
+
+node_type_Gather_Merge_count
+
+node_type_OTHER_count
+
+Estimates
+
+total_estimated_rows
+
+total_estimated_bytes
+
+Query-level metadata
+
+query_length_chars
+
+has_group_by
+
+has_order_by
+
+has_limit
+
+num_aggregate_functions
+
+num_joins
+
+num_tables_referenced
+
+num_where_conditions
 ---
 
 ## 📁 Project Structure & File Descriptions
